@@ -136,25 +136,18 @@ def update_values(response, dataframe):
     city = list(dataframe['city'])
 
     for index in response['selected_rows']:
-        print(index)
         original_not_to_change.append(index['Original'])
 
     original = list(response['data']['Original'])
     changed = list(response['data']['Changed'])
 
-    print(original)
-    print(changed)
     for part in range(0, len(original)):
         parted_original = original[part].split(',')
-        print(parted_original[0])
         parted_changed = changed[part].split(',')
         if original[part] in original_not_to_change:
             continue
         elif parted_original[0] in city:
-            print(parted_original[0])
             ind = city.index(parted_original[0])
-            print(ind)
-            print(city[ind])
             city[ind] = parted_changed[0]
             state[ind] = parted_changed[1]
 
@@ -193,8 +186,34 @@ def checkAutoCorrect(tokenlist):
     return temp.upper()
 
 
+def update_provider_names(response, dataframe):
+
+    original_not_to_change = []
+    changed = []
+    provider = list(dataframe['Provider Name"'])
+
+    for index in response['selected_rows']:
+        original_not_to_change.append(index['Provider Name'])
+
+    original = list(response['data']['Provider Name'])
+    changed = list(response['data']['Filtered Rows'])
+
+    for part in range(0, len(original)):
+        parted_original = original[part]
+        parted_changed = changed[part]
+        if original[part] in original_not_to_change:
+            continue
+        elif parted_original in provider:
+            ind = provider.index(parted_original)
+            provider[ind] = parted_changed
+
+    dataframe['Provider Name'] = provider
+    return dataframe
+
+
 # MAIN FUNCTION:
 # ----------------------------------------------------
+
 st.set_page_config(layout="wide")
 
 with st.sidebar:
@@ -228,18 +247,20 @@ if page == 'Address Issue':
 
     if 'final' in st.session_state:
 
-        if st.sidebar.button('Sort Abbreviations'):
+        if st.sidebar.button('Generate Complete File..'):
 
             if st.session_state['abbrev'] == True:
                 data_frame = update_values(
                     st.session_state['response'], st.session_state['dataframe'])
                 st.session_state['dataframe'] = data_frame
-                # st.write(st.session_state['response']['data']['Original'])
                 tokens = preprocess_abbreviation(data_frame)
                 st.session_state['dataframe']['address'] = tokens
                 st.session_state['abbrev'] = False
 
             st.session_state['preprocess'] = False
+            st.markdown("""
+                [Download CSV file](st.session_state['dataframe'])
+            """)
             st.write('#### Complete Preprocessed File: ')
             st.dataframe(st.session_state['dataframe'], width=650, height=550)
 
@@ -292,11 +313,37 @@ else:
 
     if uploaded_file is not None:
 
-        dataset1 = pd.read_csv(uploaded_file)
-        st.write("File Preview:")
-        st.dataframe(dataset1, width=650, height=550)
+        if 'input_df' not in st.session_state:
 
-        if st.sidebar.button("Preprocess"):
+            dataset1 = pd.read_csv(uploaded_file)
+            st.session_state['input_df'] = dataset1
+            st.write("File Preview:")
+            st.dataframe(dataset1, width=650, height=550)
+
+        if st.sidebar.button(' Preprocess ↻ '):
+
+            if 'preprocess' not in st.session_state:
+                st.session_state['preprocess'] = True
+                st.session_state['complete_file'] = True
+                st.session_state['final'] = True
+
+    if 'final' in st.session_state:
+
+        if st.sidebar.button('Generate Preprocessesd File.'):
+            if st.session_state['complete_file'] == True:
+                data_frame = update_provider_names(
+                    st.session_state['response'], st.session_state['dataframe'])
+
+            st.session_state['preprocess'] = False
+            st.markdown("""
+                [Download CSV file](st.session_state['dataframe'])
+            """)
+            st.write('#### Complete Preprocessed File: ')
+            st.dataframe(data_frame, width=650, height=550)
+
+    if 'preprocess' in st.session_state:
+
+        if st.session_state['preprocess'] == True:
 
             dict = enchant.Dict("en_US")
             dataset1 = pd.DataFrame(
@@ -308,5 +355,26 @@ else:
             dataset1["Filtered Name"] = [checkAutoCorrect(
                 x) for x in dataset1["tokenized Name"]]
 
-            st.write(' #### Complete Preprocessed File: ')
-            st.dataframe(dataset1, width=650, height=550)
+            st.write("## Corrected Provider Names: ")
+            st.session_state['dataframe'] = dataset1
+            gd = GridOptionsBuilder.from_dataframe(dataset1)
+            gd.configure_default_column(editable=True, groupable=True)
+            gd.configure_selection(
+                selection_mode="multiple", use_checkbox=True)
+            gridoptions = gd.build()
+            response = AgGrid(dataset1,
+                              gridOptions=gridoptions,
+                              editable=True,
+                              theme='balham',
+                              update_mode=GridUpdateMode.MANUAL,
+                              allow_unsafe_jscode=True,
+                              height=200,
+                              fit_columns_on_grid_load=True)
+
+            st.markdown("""                 *Note:* 
+                
+                - Don't forget to hit enter ↩ on to update.
+                - If you want the original value to be retained ✓ the check box. """)
+
+            sel_rows = response['selected_rows']
+            st.session_state['response'] = response
