@@ -6,12 +6,13 @@ import pandas as pd
 import enchant
 import numpy as np
 from numpy.linalg import norm
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 from st_aggrid import AgGrid, GridUpdateMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 from nltk.tokenize import sent_tokenize, word_tokenize
 from spellchecker import SpellChecker
 from fuzzywuzzy import fuzz
+import base64
 
 Cluster = {}
 threshold = 0.60
@@ -99,7 +100,7 @@ def preprocess(df, predefined_dataset, city_state_predefined):
 
 def preprocess_abbreviation(df):
 
-    abbreviation = pd.read_excel('Dataset/Abrreviations.xlsx')
+    abbreviation = pd.read_excel('Abrreviations.xlsx')
     proper_abbreviations = abbreviation['Abbreviations']
     proper_abbreviations = list(proper_abbreviations)
 
@@ -185,18 +186,26 @@ def checkAutoCorrect(tokenlist):
 
     return temp.upper()
 
+def filedownload(df):
+    csv = df.to_csv(index = False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href = "data:file/csv;base64,{64}" download="data.csv">Download CSV File</a>'
+    return href
 
 def update_provider_names(response, dataframe):
 
     original_not_to_change = []
     changed = []
-    provider = list(dataframe['Provider Name"'])
+
+    provider = list(dataframe['Provider_Name'])
+
 
     for index in response['selected_rows']:
-        original_not_to_change.append(index['Provider Name'])
+        original_not_to_change.append(index['Provider_Name'])
 
-    original = list(response['data']['Provider Name'])
-    changed = list(response['data']['Filtered Rows'])
+
+    original = list(response['data']['Provider_Name'])
+    changed = list(response['data']['Filtered_Name'])
 
     for part in range(0, len(original)):
         parted_original = original[part]
@@ -207,7 +216,7 @@ def update_provider_names(response, dataframe):
             ind = provider.index(parted_original)
             provider[ind] = parted_changed
 
-    dataframe['Provider Name'] = provider
+    dataframe['Provider_Name'] = provider
     return dataframe
 
 
@@ -218,13 +227,13 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
     st.markdown("""
-    __Select an entity from list below__
+    __Select Data Attribute From List Below__
     """)
-    page = st.selectbox('Select:', ['Address Issue', 'Provider Issue'])
+    page = st.selectbox('Select :', ['Address', 'Provider Name'])
 
-if page == 'Address Issue':
+if page == 'Address':
 
-    st.write(""" # Address Data Quality Issue:
+    st.write(""" # Address Data Quality :
     Please upload the required dataset. """)
 
     uploaded_file = st.sidebar.file_uploader(
@@ -305,7 +314,7 @@ if page == 'Address Issue':
 
 else:
 
-    st.write(""" # Provider Data Quality Issue:
+    st.write(""" # Provider Data Quality:
     Please upload the required dataset. """)
 
     uploaded_file = st.sidebar.file_uploader(
@@ -331,38 +340,37 @@ else:
 
         if st.sidebar.button('Generate Preprocessesd File.'):
             if st.session_state['complete_file'] == True:
+
                 data_frame = update_provider_names(
                     st.session_state['response'], st.session_state['dataframe'])
 
             st.session_state['preprocess'] = False
-            st.markdown("""
-                [Download CSV file](st.session_state['dataframe'])
-            """)
+            st.markdown(filedownload(data_frame['Provider_Name']), unsafe_allow_html=True)
             st.write('#### Complete Preprocessed File: ')
-            st.dataframe(data_frame, width=650, height=550)
+            st.dataframe(data_frame['Provider_Name'], width=650, height=550)
 
     if 'preprocess' in st.session_state:
 
         if st.session_state['preprocess'] == True:
 
             dict = enchant.Dict("en_US")
-            dataset1 = pd.DataFrame(
-                dataset1["Provider Name"], columns=["Provider Name"])
+            dataset1 = pd.DataFrame(st.session_state['input_df']
+                ["Provider_Name"], columns=["Provider_Name"])
             # tokenization of provider name
-            dataset1["tokenized Name"] = [
-                list(word_tokenize(x)) for x in dataset1["Provider Name"]]
+            dataset1["tokenized_Name"] = [
+                list(word_tokenize(x)) for x in dataset1["Provider_Name"]]
             # correction  string
-            dataset1["Filtered Name"] = [checkAutoCorrect(
-                x) for x in dataset1["tokenized Name"]]
+            dataset1["Filtered_Name"] = [checkAutoCorrect(
+                x) for x in dataset1["tokenized_Name"]]
 
             st.write("## Corrected Provider Names: ")
             st.session_state['dataframe'] = dataset1
-            gd = GridOptionsBuilder.from_dataframe(dataset1)
+            gd = GridOptionsBuilder.from_dataframe(dataset1[["Provider_Name","Filtered_Name"]])
             gd.configure_default_column(editable=True, groupable=True)
             gd.configure_selection(
                 selection_mode="multiple", use_checkbox=True)
             gridoptions = gd.build()
-            response = AgGrid(dataset1,
+            response = AgGrid(dataset1[["Provider_Name","Filtered_Name"]],
                               gridOptions=gridoptions,
                               editable=True,
                               theme='balham',
