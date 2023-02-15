@@ -1,0 +1,235 @@
+address,city,state,zip,Clusters
+777 Brockton Avenue,Abington,MA,2351,1
+30 Memorial Drive,Avon,MA,2322,0
+250 Hartford Avenue,Bellinghm,MN,2019,0
+700 Oak Street,Brockton,MA,2301,0
+66-4 Parkhurst Road,Chelmsford,MA,1824,0
+591 Memorial Drive,Chicopee,MA,1020,0
+55 Brooksby Village Way,Danvers,MA,1923,0
+137 Teaticket Highway,East Falmouth,MA,2536,0
+42 Fairhaven Commons Way,Fairhaven,MA,2719,0
+374 William South Canning Boulevard,Fall River,MA,2721,0
+121 Worcester Road,Framgam,M,1701,0
+677 Timpany Boulevard,Gardner,MA,1440,0
+337 Russell Street,Hadley,MA,1035,0
+295 Plymouth Street,Halifax,MA,2338,0
+1775 Washington Street,Hanover,MA,2339,0
+280 Washington Street,Hudson,MA,1749,0
+20 Soojian Drive,Leicester,MA,1524,0
+11 Jungle Road,Leominster,MA,1453,0
+301 Massachusetts Avenue,Lunenburg,MA,1462,0
+780 Lynnway,Lynn,MA,1905,0
+70 Pleasant Valley Street,Methuen,MA,1844,0
+830 Curran Memorial Highway,North Adams,MA,1247,0
+1470 South Washington Street,North Attleboro,MA,2760,0
+506 State Road,North Dartmouth,MA,2747,0
+742 Main Street,North Oxford,MA,1537,0
+72 Main Street,North Reading,MA,1864,0
+200 Otis Street,Northborough,MA,1532,0
+180 North King Street,Northampton,MA,1060,0
+555 East Main Street,Orange,MA,1364,0
+555 Hubbard Ave-Suite 12,Pittsfield,MN,1201,0
+300 Colony Place,Plymouth,MA,2360,0
+301 Falls Boulevard,Quincy,MA,2169,0
+36 Paramount Drive,Raynham,MA,2767,0
+450 Highland Avenue,Salem,OR,1970,0
+1180 Fall River Avenue,Seekonk,MA,2771,0
+1105 Boston Road,Springfield,MA,1119,0
+100 Charlton Road,Sturbridge,MA,1566,0
+262 Swansea Mall Drive,Swansea,MA,2777,0
+333 Main Street,Tewksbury,MA,1876,0
+550 Providence Highway,Walpole,MA,2081,0
+352 Palmer Road,Ware,MA,1082,0
+3005 Cranberry Highway Rt 6 28,Wareham,MA,2538,0
+250 Rt 59,Airmont,NY,10901,0
+141 Washington Avenue Extension,Albany,NY,12205,0
+13858 Rt 31 West,Albion,NY,14411,0
+2055 Niagara Falls Boulevard,Amherst,NY,14228,0
+101 Sanford Farm Shpg Center,Amsterdam,NY,12010,0
+297 Grant Avenue,Auburn,NY,13021,0
+4133 Veterans Memorial Drive,Batavia,NY,14020,0
+6265 Brockport Spencerport Road,Brockport,NY,14420,0
+5399 West Genesse Street,Camillus,NY,13031,0
+3191 County rd 10,Canandaigua,NY,14424,0
+30 Catskill,Catskill,NY,12414,0
+161 Centereach Mall,Centereach,NY,11720,0
+3018 East Avenue,Central Square,NY,13036,0
+100 Thruway Plaza,Cheektowaga,NY,14225,0
+8064 Brewerton Road,Cicero,NY,13039,0
+5033 Transit Road,Clarence,NY,14031,0
+3949 Route 31,Clay,NY,13041,0
+139 Merchant Place,Cobleskill,NY,12043,0
+85 Crooked Hill Road,Commack,NY,11725,0
+872 Route 13,Cortlandville,NY,13045,0
+279 Troy Road,East Greenbush,NY,12061,0
+2465 Hempstead Turnpike,East Meadow,NY,11554,0
+6438 Basile Rowe,East Syracuse,NY,13057,0
+25737 US Rt 11,Evans Mills,NY,13637,0
+901 Route 110,Farmingdale,NY,11735,0
+2400 Route 9,Fishkill,NY,12524,0
+10401 Bennett Road,Fredonia,MN,14063,0
+1818 State Route 3,Fulton,NY,13069,0
+4300 Lakeville Road,Geneseo,NY,14454,0
+990 Route 5 20,Geneva,NY,14456,0
+311 RT 9W,Glenmont,NY,12077,0
+200 Dutch Meadows Lane,Glenville,NY,12302,0
+100 Elm Ridge Center Drive,Greece,NY,14626,0
+1549 Rt 9,Halfmoon,NY,12065,0
+5360 Southwestern Boulevard,Hamburg,NY,14075,0
+103 North Caroline Street,Herkimer,NY,13350,0
+1000 State Route 36,Hornell,NY,14843,0
+1400 County Road 64,Horseheads,NY,14845,0
+135 Fairgrounds Memorial Pkwy,Ithaca,NY,14850,0
+2 Gannett Drive,Johnson City,NY,13790,0
+233 5th Avenue Ext,Johnstown,NY,12095,0
+601 Frank Stottile Boulevard,Kingston,NY,12401,0
+350 East Fairmount Avenue,Lakewood,NY,14750,0
+4975 Transit Road,Lancaster,NY,14086,0
+579 Troy-Schenectady Road,Latham,NY,12110,0
+5783 So Transit Road,Lockport,NY,14094,0
+7155 State Rt 12 South,Lowville,NY,13367,0
+425 Route 31,Macedon,NY,14502,0
+3222 State Rt 11,Malone,NY,12953,0
+200 Sunrise Mall,Massapequa,NY,11758,0
+43 Stephenville Street,Massena,NY,13662,0
+750 Middle Country Road,Middle Island,NY,11953,0
+470 Route 211 East,Middletown,NY,10940,0
+3133 East Main Street,Mohegan Lake,NY,10547,0
+288 Larkin,Monroe,NY,10950,0
+41 Anawana Lake Road,Monticello,NY,12701,0
+4765 Commercial Drive,New Hartford,NY,13413,0
+1201 Rt 300,Newburgh,NY,12550,0
+255 West Main Street,Avon,CT,6001,0
+120 Commercial Parkway,Branford,CT,6405,0
+1400 Farmington Avenue,Bristol,CT,6010,0
+161 Berlin Road,Cromwell,CT,6416,0
+67 Newton Road,Danbury,CT,6810,0
+656 New Haven Avenue,Derby,CT,6418,0
+69 Prospect Hill Road,East Windsor,CT,6088,0
+150 Gold Star Highway,Groton,CT,6340,0
+900 Boston Post Road,Guilford,CT,6437,0
+2300 Dixwell Avenue,Hamden,CT,6514,0
+495 Flatbush Avenue,Hartford,CT,6106,0
+180 River Road,Lisbon,CT,6351,0
+420 Buckland Hills Drive,Manchester,CT,6040,0
+1365 Boston Post Road,Milford,CT,6460,0
+1100 New Haven Road,Naugatuck,CT,6770,0
+315 Foxon Boulevard,New Haven,CT,6513,0
+164 Danbury Road,New Milford,CT,6776,2
+3164 Berlin Turnpike,Newington,CT,6111,0
+474 Boston Post Road,North Windham,CT,6256,0
+164 Denbry Road,New Milford,CT,6776,2
+680 Connecticut Avenue,Norwalk,CT,6854,0
+220 Salem Turnpike,Norwich,CT,6360,0
+655 Boston Post Road,Old Saybrook,CT,6475,0
+625 School Street,Putnam,CT,6260,0
+80 Town Line Road,Rocky Hill,CT,6067,0
+465 Bridgeport Avenue,Shelton,CT,6484,0
+235 Queen Street,Southington,CT,6489,0
+150 Barnum Avenue Cutoff,Stratford,CT,6614,0
+970 Torringford Street,Torrington,CT,6790,0
+844 No Colony Road,Wallingford,CT,6492,0
+910 Wolcott Street,Waterbury,CT,6705,0
+155 Waterford Parkway No,Waterford,CT,6385,0
+515 Sawmill Road,West Haven,CT,6516,0
+2473 Hackworth Road,Adamsville,AL,35005,0
+630 Coonial Promenade Pkwy,Alabaster,AL,35007,0
+2643 Highway 280 West,Alexander City,AL,35010,0
+540 West Bypass,Andalusia,AL,36420,0
+5560 Mcclellan Boulevard,Anniston,AL,36206,0
+1450 No Brindlee Mtn Pkwy,Arab,AL,35016,0
+1011 US Highway 72 East,Athens,AL,35611,0
+973 Gilbert Ferry Road Se,Attalla,AL,35954,0
+1717 South College Street,Auburn,AL,36830,0
+701 Mcmeans Avenue,Bay Minette,AL,36507,0
+750 Academy Drive,Bessemer,AL,35022,0
+312 Palisades Boulevard,Birmingham,AL,35209,0
+1600 Montclair Road,Birmingham,AL,35210,0
+5919 Trussville Crossings Pkwy,Birmingham,AL,35235,0
+9248 Parkway East,Birmingham,AL,35206,0
+1972 Highway 431,Boaz,AL,35957,0
+10675 Highway 5,Brent,AL,35034,0
+2041 Douglas Avenue,Brewton,AL,36426,0
+5100 Highway 31,Calera,AL,35040,0
+1916 Center Point Road,Center Point,AL,35215,0
+1950 West Main Street,Centre,AL,35960,0
+16077 Highway 280,Chelsea,AL,35043,0
+1415 7Th Street South,Clanton,AL,35045,0
+626 Olive Street Sw,Cullman,AL,35055,0
+27520 Highway 98,Daphne,AL,36526,0
+2800 Spring Avn South-West,Decatur,AL,35603,0
+969 Us Highway 80 West,Demopolis,AL,36732,0
+3300 South Oates Street,Dothan,AL,36301,0
+4310 Montgomery Highway,Dothan,AL,36303,0
+600 Boll Weevil Circle,Enterprise,AL,36330,0
+3176 South Eufaula Avenue,Eufaula,AL,36027,0
+7100 Aaron Aronov Drive,Fairfield,AL,35064,0
+10040 County Road 48,Fairhope,AL,36533,0
+3186 Highway 171 North,Fayette,AL,35555,0
+3100 Hough Road,Florence,AL,35630,0
+2200 South Mckenzie Street,Foley,AL,36535,0
+2001 Glenn Bldv Sw,Fort Payne,AL,35968,0
+340 East Meighan Boulevard,Gadsden,AL,35903,0
+890 Odum Road,Gardendale,AL,35071,0
+1608 West Magnolia Avenue,Geneva,AL,36340,0
+501 Willow Lane,Greenville,AL,36037,0
+170 Fort Morgan Road,Gulf Shores,AL,36542,0
+11697 US Highway 431,Guntersville,AL,35976,0
+42417 Highway 195,Haleyville,AL,35565,0
+1706 Military Street South,Hamilton,AL,35570,0
+1201 Highway 31 North-West,Hartselle,AL,35640,0
+209 Lakeshore Parkway,Homewood,AL,35209,0
+2780 John Hawkins Pkwy,Hoover,AL,35244,0
+5335 Highway 280 South,Hoover,AL,35242,0
+1007 Red Farmer Drive,Hueytown,AL,35023,0
+2900 South Mem PkwyDrake Avenue,Huntsville,AL,35801,0
+11610 Memorial Pkwy South,Huntsville,AL,35803,0
+2200 Sparkman Drive,Huntsville,AL,35810,0
+330 Sutton Road,Huntsville,AL,35763,0
+6140A Univ Drive,Huntsville,AL,35806,0
+4206 North College Avenue,Jackson,AL,36545,0
+1625 Pelham South,Jacksonville,AL,36265,0
+1801 Highway 78 East,Jasper,AL,35501,0
+8551 Whitfield Avenue,Leeds,AL,35094,0
+8650 Madison Boulevard,Madison,AL,35758,0
+10675 Highway 5,Brent,AL,35034,0
+1970 South University Boulevard,Mobile,AL,36609,0
+6350 Cottage Hill Road,Mobile,AL,36609,0
+10675 Highwy 5,Brt,AL,35034,0
+2500 Dawes Road,Mobile,AL,36695,0
+5245 Rangeline Service Road,Mobile,AL,36619,0
+685 Schillinger Road,Mobile,AL,36695,0
+3371 South Alabama Avenue,Monroeville,AL,36460,0
+10710 Chantilly Pkwy,Montgomery,AL,36117,0
+3801 Eastern Boulevard,Montgomery,AL,36116,0
+3801 Estrn Boulevard,Montgomery,AL,36117,0
+851 Ann Street,Montgomery,AL,36107,0
+15445 Highway 24,Moulton,AL,35650,0
+517 West Avalon Avenue,Muscle Shoals,AL,35661,0
+5710 Mcfarland Boulevard,Northport,AL,35476,0
+2453 2Nd Avenue East,Oneonta,AL,35121,0
+2900 Pepperrell Pkwy,Opelika,AL,36801,0
+92 Plaza Lane,Oxford,AL,36203,0
+1537 Highway 231 South,Ozark,AL,36360,0
+2181 Pelham Pkwy,Pelham,AL,35124,0
+165 Vaughan Lane,Pell City,AL,35125,0
+3700 Highway 280-431 North,Phenix City,AL,36867,0
+1903 Cobbs Ford Road,Prattville,AL,36066,0
+4180 Us Highway 431,Roanoke,AL,36274,0
+13675 Highway 43,Russellville,AL,35653,3
+1095 Industrial Pkwy,Saraland,AL,36571,0
+24833 Johnt Reidprkw,Scottsboro,AL,35768,0
+1501 Highway 14 East,Selma,AL,36703,0
+7855 Moffett Road,Semmes,AL,36575,0
+13675 Highway 43,Russelvile,AL,35653,3
+690 Highway 78,Sumiton,AL,35148,0
+41301 US Highway 280,Sylacauga,AL,35150,0
+214 Haynes Street,Talladega,AL,35160,0
+1300 Gilmer Avenue,Tallassee,AL,36078,0
+34301 Highway 43,Thomasville,AL,36784,0
+1420 Us 231 South,Troy,AL,36081,0
+1501 Skyland Boulevard East,Tuscaloosa,AL,35405,0
+3501 20th Avenue,Valley,AL,36854,0
+1300 Montgomery Highway,Vestavia Hills,AL,35216,0
+4538 Us Highway 231,Wetumpka,AL,36092,0
+777 Brockt Aven,Abington,MA,2351,1
